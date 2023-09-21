@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    primary:
+      url:  jdbc:postgresql://localhost:5432/query
+      username: query
+      password: query
+      driverClassName: org.postgresql.Driver
+    apartowner:
+      url:  jdbc:postgresql://localhost:5432/apartowner
+      username: apartowner
+      password: apartowner
+      driverClassName: org.postgresql.Driver
+  jackson:
+   time-zone: Asia/Tokyo
+
+server:
+  port: 8080
+  servlet:
+    context-path: /table_sync
+
+  
+logging:
+  level:
+    org: 
+      hibernate:
+        SQL: debug
+      type:
+        descriptor:
+          sql: trace
+      springframework:
+        orm:
+          jpa: DEBUG
