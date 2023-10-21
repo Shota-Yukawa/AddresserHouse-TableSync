@@ -4,10 +4,7 @@ import com.ah.tablesync.datasource.entity.parts.SystemDateEntityParts;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -16,12 +13,10 @@ import lombok.EqualsAndHashCode;
 @Table(name = "apartowners")
 @Data
 @EqualsAndHashCode(callSuper = false)
-@SequenceGenerator(name = "pkey_seq", sequenceName = "apartowners_apartowner_id_seq", allocationSize = 1)
 public class ApartownersEntity extends SystemDateEntityParts {
 
 	@Id
 	@Column(name = "apartowner_id")
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "pkey_seq")
 	private Integer apartownerId;
 
 	@Column(name = "apartowner_name", nullable = false)

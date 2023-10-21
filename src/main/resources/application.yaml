@@ -1,15 +1,9 @@
 spring:
   datasource:
-    primary:
-      url:  jdbc:postgresql://localhost:5432/query
-      username: query
-      password: query
-      driverClassName: org.postgresql.Driver
-    apartowner:
-      url:  jdbc:postgresql://localhost:5432/apartowner
-      username: apartowner
-      password: apartowner
-      driverClassName: org.postgresql.Driver
+    url:  jdbc:postgresql://ah-postgres.cotg2onn7xlt.ap-northeast-1.rds.amazonaws.com:5432/query
+    username: query
+    password: query
+    driverClassName: org.postgresql.Driver
   jackson:
    time-zone: Asia/Tokyo
 
