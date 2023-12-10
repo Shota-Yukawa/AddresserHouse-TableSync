@@ -4,8 +4,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ah.tablesync.datasource.entity.apartowner.ApartownersEntity;
-import com.ah.tablesync.datasource.repository.apartowner.ApartownerRepository;
+import com.ah.querydatasource.entity.apartowner.ApartownersEntity;
+import com.ah.querydatasource.repository.apartowner.ApartownerRepository;
 import com.ah.tablesync.models.request.apartowner.ApartownerSyncReqBean;
 
 import lombok.RequiredArgsConstructor;
