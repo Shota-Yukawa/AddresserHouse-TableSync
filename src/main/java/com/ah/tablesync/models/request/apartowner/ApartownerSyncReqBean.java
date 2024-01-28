@@ -1,9 +1,13 @@
 package com.ah.tablesync.models.request.apartowner;
 
+import com.ah.tablesync.models.request.parts.SystemDateParts;
+
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 @Data
-public class ApartownerSyncReqBean {
+@EqualsAndHashCode(callSuper = false)
+public class ApartownerSyncReqBean extends SystemDateParts{
 
 	private Integer apartownerId;
 
