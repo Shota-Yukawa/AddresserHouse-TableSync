@@ -21,6 +21,7 @@ import lombok.RequiredArgsConstructor;
 public class ApartownerSyncController {
 
 	private final ApartownerSyncService service;
+	private final JsonConverter jsonConverter;
 
 	/**
 	 * apartownersテーブル[登録]からのqueryの同期リクエストを処理
@@ -29,7 +30,7 @@ public class ApartownerSyncController {
 	 */
 	@PostMapping("insert")
 	public String insertSysc(@RequestBody TableSyncRequestBean body) {
-		ApartownerSyncReqBean reqEntity = JsonConverter.deserializeJson(body.getData(), ApartownerSyncReqBean.class);
+		ApartownerSyncReqBean reqEntity = jsonConverter.deserializeJson(body.getData(), ApartownerSyncReqBean.class);
 		service.syncUpsert(reqEntity);
 		return "success";
 	}
@@ -41,7 +42,7 @@ public class ApartownerSyncController {
 	 */
 	@PutMapping("update")
 	public String updateSysc(@RequestBody TableSyncRequestBean body) {
-		ApartownerSyncReqBean reqEntity = JsonConverter.deserializeJson(body.getData(), ApartownerSyncReqBean.class);
+		ApartownerSyncReqBean reqEntity = jsonConverter.deserializeJson(body.getData(), ApartownerSyncReqBean.class);
 		service.syncUpsert(reqEntity);
 		return "success";
 	}

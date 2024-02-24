@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan({ "com.ah.tablesync", "com.ah.tablesynclib", "com.ah.querydatasource" })
+@ComponentScan({ "com.ah.tablesync", "com.ah.tablesynclib", "com.ah.querydatasource", "com.ah.commonlib" })
 @EntityScan("com.ah.querydatasource.entity")
 @EnableJpaRepositories("com.ah.querydatasource.repository")
 public class TablesyncApplication {
