@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ah.commonlib.JsonConverter;
-import com.ah.tablesync.aparowner.services.ApartownerSyncService;
+import com.ah.tablesync.aparowner.services.ApartownersSyncService;
 import com.ah.tablesync.models.request.apartowner.ApartownerSyncReqBean;
 import com.ah.tablesynclib.bean.TableSyncRequestBean;
 
@@ -18,9 +18,9 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("apartowners")
 @RequiredArgsConstructor
-public class ApartownerSyncController {
+public class ApartownersSyncController {
 
-	private final ApartownerSyncService service;
+	private final ApartownersSyncService service;
 	private final JsonConverter jsonConverter;
 
 	/**

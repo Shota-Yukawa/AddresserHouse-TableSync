@@ -16,7 +16,7 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 @Transactional // メソッド開始時にトランザクションを開始、終了時にコミットする
-public class ApartownerSyncService {
+public class ApartownersSyncService {
 
 	private final ApartownerRepository rep;
 	private final ModelMapper modelMapper;
