@@ -16,7 +16,7 @@ import com.ah.tablesynclib.bean.TableSyncRequestBean;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("apartowner")
+@RequestMapping("apartowners")
 @RequiredArgsConstructor
 public class ApartownerSyncController {
 
